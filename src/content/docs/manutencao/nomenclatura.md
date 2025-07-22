@@ -4,7 +4,11 @@ title: Nomenclatura
 
 ## Campos
 
-Todo identificador de campo, seja em mensagem de `Requisição/Resposta` ou `Parâmetro de Query` ou `Template de Query` **DEVE** ser escrito em `inglês americano` e em `letras minúsculas`.
+Todo identificador de campo, seja em mensagem de `Requisição/Resposta` ou `Parâmetro de Query` ou `Template de Query` **DEVE** em `letras minúsculas`.
+
+O idioma a ser utilizado pela representação dos campos deve ser definido no momento da especificação da API. Se escolhido `português` ou `inglês` vai depender do contexto da aplicação.
+
+> Uma vez definido o idioma, esse **DEVE** se manter constante por todos os endpoints da API.
 
 O `camelCase` **DEVE** ser utilizado para representar palavras compostas. A API Não **DEVE** utilizar o símbolo `_` no nome de campos, exceto quando o seu uso se destina a palavras reservadas.
 

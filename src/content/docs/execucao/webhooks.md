@@ -20,7 +20,7 @@ POST /subscriptions HTTP/1.1
 Content-Type: application/json
 
 {
-    "topic": "orders:update_status",
+    "topic": "orders:status_update",
     "callbackUrl": "https://clienteserver.com/send/callback/to/me"
 }
 ```
@@ -51,17 +51,9 @@ Requisição POST
 POST https://clienteserver.com/send/callback/to/me HTTP/1.1
 
 {       
-    "subscription": {
-        "id": 4746,
-    },
-    "order": {
-        "id": 35689,
-        "status": "approved",
-        "client": {
-            "id": "5321",
-            "email": "luiz@magazord.com.br"
-        }
-    }
+    "resourceId": 35689,
+    "resourceType": "order:status_update",
+    "eventDate": "2025-07-22T23:00"
 }
 ```
 

@@ -2,16 +2,18 @@
 title: Operações em Lote
 ---
 
-Uma ação processa vários recursos relacionados em lote **DEVE** usar um endpoint com o método correspondente e seu corpo deve conter uma representação da coleção com os identificadores dos itens que serão processados.
+Uma API que processa vários recursos relacionados em lote **DEVE** usar um endpoint de nome `batch` acessado pelo método `POST` abaixo *ação* e *coleção* que está sendo manipulada.
 
-Em um cenário de desativação de múltiplos produtos, o método utilizado é `POST` (Indicando operação de processmento) e o corpo contém o campo coleção `products` onde cada item contém o `id` do registro a ser processado.
+O corpo da solicitação de processamento em lote deve conter a relação dos identificadores dos elemnetos a serem manipulados agrupados na chave `items`.
+
+> A justificação do envolpe no grupo `items` é o de flexibilizar a entrada para a inclusão de campos adicionais caso assim ocorrer no futuro.
 
 ```json
-POST /products/inactivate
+POST /products/inactivate/batch
 Content-Type: application/json
 
 {
-  "products": [
+  "items": [
     {
       "id": 42
     },
