@@ -33,6 +33,7 @@ Idealmente, uma API **DEVE** incluir Cabeçalhos de Segurança HTTP pelo menos n
 | Access-Control-Allow-Methods             | Define quais métodos HTTP são permitidos em requisições de origem cruzada.                                  |
 | Access-Control-Allow-Headers             | Especifica quais cabeçalhos HTTP podem ser usados em requisições de origem cruzada.                         |
 | Access-Control-Allow-Origin              | Define quais origens externas têm permissão para acessar o recurso.                                         |
+| Access-Control-Max-Age                   | Especifica por quanto tempo o resultado de um *preflight* request fica cacheado no browser                  |
 
 
 
