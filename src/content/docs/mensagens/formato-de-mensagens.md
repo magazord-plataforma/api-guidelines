@@ -5,7 +5,7 @@ title: Formato de Mensagens
 ### Mensagens de Entrada
 
 * Mensagens de solicitação com corpo **DEVEM** suportar o formato [`application/json`](https://datatracker.ietf.org/doc/html/rfc4627).
-* Mensagens de solicitação **PODEM** também suportar o formato [`application/x-www-form-urlencoded`](https://www.ietf.org/rfc/rfc1867.txt).
+* Mensagens de solicitação **PODEM** também suportar o formato [``multipart/form-data``](https://www.ietf.org/rfc/rfc1867.txt).
 
 ### Mensagens de Saída
 
