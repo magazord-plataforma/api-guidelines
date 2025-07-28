@@ -8,7 +8,7 @@ Todo identificador de campo, seja em mensagem de `Requisição/Resposta` ou `Par
 
 O idioma a ser utilizado pela representação dos campos deve ser definido no momento da especificação da API. Se escolhido `português` ou `inglês` vai depender do contexto da aplicação.
 
-> Uma vez definido o idioma, esse **DEVE** se manter constante por todos os endpoints da API.
+> Uma vez definido o idioma esse **DEVE** se manter constante por todos os recursos da API. Exceto em contexto de [palavras reservadas](/api-guidelines/manutencao/dicionario).
 
 O `camelCase` **DEVE** ser utilizado para representar palavras compostas. A API Não **DEVE** utilizar o símbolo `_` no nome de campos, exceto quando o seu uso se destina a palavras reservadas.
 
