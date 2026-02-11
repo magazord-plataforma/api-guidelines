@@ -127,6 +127,10 @@ export default defineConfig({
 							link: "/execucao/consultas"
 						},
 						{
+							label: "Agregações",
+							link: "/execucao/agregacoes"
+						},
+						{
 							label: "Operações em Lote",
 							link: "/execucao/operacoes-em-lote"
 						},

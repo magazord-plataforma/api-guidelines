@@ -25,7 +25,7 @@ O tipo Arquivo **PODE** apresentar dois comportamentos distintintos de acordo co
 
 | Tipo           | Especificação                                                                                        | Ocorrência | Exemplo                                             |
 | -------------- | ---------------------------------------------------------------------------------------------------- | -----------| ----------------------------------------------------| 
-| Arquivo        | [OAS3 - Files](https://swagger.io/docs/specification/v3_0/describing-request-body/file-upload/) | Upload     | [multipart/form-data](/execucao/upload-de-arquivos) |
-| Arquivo        | [OAS3 - Strings](https://swagger.io/docs/specification/v3_0/data-models/data-types/#boolean)         | Upload     | [application/json](/execucao/upload-de-arquivos)    |
-| Arquivo        | [OAS3 - Files](https://swagger.io/docs/specification/v3_0/describing-request-body/file-upload/) | Download     | [application/octet-stream](/execucao/download-de-arquivos) |
-| Arquivo        | [OAS3 - Strings](https://swagger.io/docs/specification/v3_0/data-models/data-types/#boolean)         | Download     | [application/json](/execucao/download-de-arquivos)    |
+| Arquivo        | [OAS3 - Files](https://swagger.io/docs/specification/v3_0/describing-request-body/file-upload/) | Upload     | [multipart/form-data](/api-guidelines/execucao/upload-de-arquivos) |
+| Arquivo        | [OAS3 - Strings](https://swagger.io/docs/specification/v3_0/data-models/data-types/#boolean)         | Upload     | [application/json](/api-guidelines/execucao/upload-de-arquivos)    |
+| Arquivo        | [OAS3 - Files](https://swagger.io/docs/specification/v3_0/describing-request-body/file-upload/) | Download     | [application/octet-stream](/api-guidelines/execucao/download-de-arquivos) |
+| Arquivo        | [OAS3 - Strings](https://swagger.io/docs/specification/v3_0/data-models/data-types/#boolean)         | Download     | [application/json](/api-guidelines/execucao/download-de-arquivos)    |
