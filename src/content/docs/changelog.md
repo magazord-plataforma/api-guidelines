@@ -6,6 +6,12 @@ Todas as alterações significativas neste projeto serão documentadas neste arq
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-02-11
+
+Added:
+
+  - Diretrizes para operações de Agregação (/agg)
+
 ## 2025-07-23
 
 Added:

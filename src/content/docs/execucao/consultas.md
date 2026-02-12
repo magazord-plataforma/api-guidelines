@@ -9,7 +9,7 @@ Toda API **DEVE** disponibilizar para um endpoint de consulta a estratégia `Sim
 Cada parâmetro de busca simples **DEVE** ser fornecido na forma de `chave=valor` como um [Query Parameter](https://datatracker.ietf.org/doc/html/rfc3986). 
 
 ```
-https://dev.magazord.com.br.com/user/orders?status=pending
+https://dev.magazord.com.br/user/orders?status=pending
 ```
 
 Um filtro simples **DEVE** considerar apenas o operador de igualdade (`=`).
@@ -22,7 +22,7 @@ Os filtros compostos são utilizados em cenários de interface onde os dados dev
 Para esse a API **PODE**  disponibilizar um endoint de nome `query` abaixo da coleção que está sendo consultada, acessada pelo método POST tendo os flitros complexos fornecidos no body da requisição:
 
 ```bash
-$ curl -X POST -H "Content-Type: application/json" https://dev.magazord.com.br.com/user/orders/query -d 
+$ curl -X POST -H "Content-Type: application/json" https://dev.magazord.com.br/user/orders/query -d 
 '{
   "filters": [
     {
@@ -68,7 +68,7 @@ Uma API que disponibiliza filtros complexos **DEVE** disponibilizar os seguintes
 | `like`   | Um valor `a` deve corresponder a um padrão de texto `d`   | {<br/>&nbsp;&nbsp;"field": "title", <br/>&nbsp;&nbsp;"operator": "like", <br/>&nbsp;&nbsp;"value": "Televisor Semp.*" <br/>}    |
 | `between` | Um valor `a` deve estar contido em um intervalo entre `b`e `c`   | {<br/>&nbsp;&nbsp;"field": "createdAt", <br/>&nbsp;&nbsp;"operator": "between", <br/>&nbsp;&nbsp;"value": [<br/>&nbsp;&nbsp;&nbsp;"2025-07-21T20:16:17",<br/>&nbsp;&nbsp;&nbsp; "2025-07-21T20:16:17"<br/>&nbsp;&nbsp;&nbsp;] <br/>}    |
 
-> O valor aplicado ao campo **value** do filtro complexo **DEVE** em cada operador respeitar o [Tipo de Dado](/diretrizes-gerais/tipos-de-dados) definido para ao campo utilizado para o filtro.
+> O valor aplicado ao campo **value** do filtro complexo **DEVE** em cada operador respeitar o [Tipo de Dado](/api-guidelines/diretrizes-gerais/tipos-de-dados) definido para ao campo utilizado para o filtro.
 
 ## Personalizando o resultado
 
