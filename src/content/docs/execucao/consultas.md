@@ -172,14 +172,14 @@ A API **DEVE** *popular* os grupos de informações relacionados a outras entida
 
 
 Requsição GET
-```
+```http
 GET /clients?select=name,email&populate=address HTTP/1.1
 Accept: application/json
 ```
 
 Requisição POST
 
-```
+```http
 POST /clients/query HTTP/1.1
 Accept: application/json
 
@@ -191,7 +191,7 @@ Accept: application/json
 
 Resposta HTTP
 
-```
+```json
 [{
   "name": "Arthur",
   "email": "arthur@magazord.com.br",
@@ -199,8 +199,89 @@ Resposta HTTP
     "id": 1,
     "city": "Rio do Sul",
     "state": "SC",
-    "country": "Brasil
+    "country": "Brasil"
   }
 }]
 
+```
+
+### Json Schema v7
+Schema de exemplo com suporte geral as configurações especificadas, modifique com base nas necessidades da implementação.
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "List Aplicativos",
+  "description": "Validação query de aplicativos.",
+  "type": "object",
+  "properties": {
+    "select": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+            // ... Atributos da consulta
+        ]
+      }
+    },
+    "omit": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+            // ... Atributos da consulta
+        ]
+      }
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+                // ... Atributos da consulta
+            ]
+            "description": "Campos a consultado"
+          },
+          "operator": {
+            "type": "string",
+            "enum": ["eq", "gt", "lt", "ne", "gte", "lte", "in", "like", "between"],
+            "description": "Comparador a ser utilizado"
+          },
+          "value": {
+            "type": "string",
+            "description": "Valor utilizado no filtro"
+          }
+        },
+        "required": ["field", "operator", "value"],
+        "additionalProperties": false
+      }
+    },
+    "sorters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+                // ... Atributos da ordenação
+            ]
+            "description": "Campos a usado na ordenação"
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["ASC", "DESC"],
+            "description": "Direção da ordenação"
+          }
+        },
+        "required": ["field", "direction"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["filters", "sorters", "select", "omit"]
+}
 ```
